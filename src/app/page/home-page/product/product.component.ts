@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+
 
 @Component({
   selector: 'app-product',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  loginForm!:FormGroup
+
+  constructor(private fb:FormBuilder) { }
 
   ngOnInit(): void {
+    this.loginForm = this.fb.group({
+      userName:['',Validators.required],
+      Pass:['',Validators.required]
+    })
+  }
+
+  onSubmit(){
+    console.log(this.loginForm.value)
   }
 
 }
