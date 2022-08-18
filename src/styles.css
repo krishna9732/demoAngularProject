@@ -2,12 +2,21 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-/* Border */
-::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
-    background-color: black;
-  }
-  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
-    border-radius: 4px;
-    padding: 0.75em 0.75em 0 0.75em;
-    border: 1px solid #f94747;
-  }
+.mat-form-field-appearance-outline .mat-form-field-outline{
+  color: black
+}
+  ::ng-deep 
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+       color: black;
+    }
+    mat-form-field 
+       .mat-hint, input, ::placeholder, .mat-form-field-label {
+          color: black;
+       }
+.ng-valid div input {
+        color: black !important;
+      }
+
+      .btncancel,.mat-button, button.btncancel, button.btnoutnoncan {
+        border-radius: 2px;
+    }

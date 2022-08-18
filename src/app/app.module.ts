@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     FooterComponent,
     HomePageComponent,
     DashboardComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
